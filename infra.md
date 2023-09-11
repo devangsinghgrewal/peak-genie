@@ -1,0 +1,7 @@
+- Access the service/pod directly on local by port forwarding (kubectl port-forward deployment/peak-genie 8080:8000/ kubectl port-forward service/peak-genie-service 8080:8000)
+- I created an ingress and it exposed a private ip through which i can access my service with VPN (I can directly access my ClusterIp service endpoint instead using VPN, why create an ingress for this ?)
+- I created a load balancer service and it exposed a public ip through which i can access my service without VPN
+  - It created a classic LB, should i move to alb and how?
+  - won't it be expensive?
+- Create helm chart ?
+- slack endpoint won't work without redis/celery setup?

@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: peak-genie-ingress
+spec:
+  ingressClassName: latest-nginx
+  rules:
+  - http:
+      paths:
+        - path: /peak-genie
+          pathType: Prefix
+          backend:
+            service:
+              name: peak-genie-service
+              port:
+                number: 80

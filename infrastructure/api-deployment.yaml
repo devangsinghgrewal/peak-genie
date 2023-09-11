@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: peak-genie
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: peak-genie
+      component: api
+  template:
+    metadata:
+      labels:
+        app: peak-genie
+        component: api
+    spec:
+      containers:
+        - name: api
+          image: dsg05/peak-genie-image:v1
+          ports:
+            - containerPort: 8000
+          env:
+            - name: REDIS_URL
+              value: redis://redis:6379
+            - name: OPENAI_API_KEY
+              value: ${OPENAI_API_KEY}
+            - name: SLACK_TOKEN
+              value: ${SLACK_TOKEN}
+            - name: PEAK_API_KEY
+              value: ${PEAK_API_KEY}
+            - name: DB_COLLECTION_NAME
+              value: hackathon

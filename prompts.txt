@@ -1,0 +1,4 @@
+# Logs debugger
+{
+     "query_text": "COPY ./requirement.txt /app/ sha256:02abcaa9704e955bc99efaa13ed4ddbfe4a67ec5263db440cd27eb930012da7e ERROR: '/requirement.txt' not found: not found"
+}
