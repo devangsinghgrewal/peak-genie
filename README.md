@@ -1,4 +1,4 @@
-# Peak Genie
+# Peak Genie (All features are not available in this repo, just initial version)
 
 Information retrieval on your private data using Embeddings Vector Search and LLMs.
 
